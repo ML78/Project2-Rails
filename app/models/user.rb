@@ -14,8 +14,10 @@
 #
 
 class User < ApplicationRecord
-  has secure_password
+  has_secure_password
   has_many :achievements
   has_many :tasks, :through => :achievements
+
+  validates :email, :presence => true, :uniqueness => true
 
 end
