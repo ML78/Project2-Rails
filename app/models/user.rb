@@ -19,5 +19,6 @@ class User < ApplicationRecord
   has_many :tasks, :through => :achievements
 
   validates :email, :presence => true, :uniqueness => true
+  validates :name, :presence => true
 
 end
