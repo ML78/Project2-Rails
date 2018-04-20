@@ -1,6 +1,9 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
 
+  before_action :require_same_user, only: [:edit, :update, :destroy] #cannot delete another user's account
+
+
   # GET /users
   # GET /users.json
   def index
@@ -25,6 +28,11 @@ class UsersController < ApplicationController
   # POST /users.json
   def create
     @user = User.new(user_params)
+
+  if @user.image?
+    @cloudinary = Cloudinary::Uploader.upload(params[:user][:image])
+    @user.update :image => @cloudinary['url']
+  end
 
     respond_to do |format|
       if @user.save
@@ -69,6 +77,15 @@ class UsersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_params
-      params.require(:user).permit(:name, :email, :image, :password_digest, :location, :admin)
+      params.require(:user).permit(:name, :email, :image, :password, :password_confirmation, :location, :admin)
     end
+
+    def require_same_user
+      user = User.find(params[:id])
+      if current_user != user
+        redirect_to users_path
+      end
+    end
+
+
 end

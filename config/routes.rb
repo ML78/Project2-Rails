@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  root :to => 'pages#landing'
+  root :to => 'users#new'
 
   resources :tasks
   resources :achievements
