@@ -12,9 +12,9 @@
 
 <p>
   <strong>Image:</strong>
-  <%= @task.image %>
+  <!-- <%= @task.image %> -->
+uploader.retrieve_from_store!(@task.image)
 </p>
-
 <p>
   <strong>Category:</strong>
   <%= @task.category %>

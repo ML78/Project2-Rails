@@ -17,8 +17,9 @@ class User < ApplicationRecord
   has_secure_password
   has_many :achievements
   has_many :tasks, :through => :achievements
-
   validates :email, :presence => true, :uniqueness => true
   validates :name, :presence => true
+  geocoded_by :location
+  after_validation :geocode
 
 end
