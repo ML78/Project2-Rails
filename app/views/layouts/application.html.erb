@@ -9,6 +9,16 @@
   </head>
 
   <body>
-    <%= yield %>
+    <div class="container">
+      <nav>
+        <%= link_to 'Home', root_path %>
+        <%= link_to 'Tasks', new_task_path %>
+        <%= link_to 'Achievements', new_achievement_path %>
+        <%= link_to 'Users', new_user_path %>
+
+      </nav>
+      <%= yield %>
+    </div>
+
   </body>
 </html>
