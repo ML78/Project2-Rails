@@ -1,5 +1,5 @@
 User.destroy_all
-u1 = User.create(:name => 'Admin', :email => 'admin@ga.co', :location => 'Sydney', :password => 'admin', :admin => true)
+u1 = User.create(:name => 'Admin', :email => 'admin@gmail.com', :location => 'Sydney', :password => 'admin', :admin => true)
 
 
 Task.destroy_all
