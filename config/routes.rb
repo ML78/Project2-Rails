@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
 
-  root :to => 'pages#landing'
+  root :to => 'users#new'
+
+  get '/home' => 'pages#home'
 
   resources :tasks
   resources :achievements
