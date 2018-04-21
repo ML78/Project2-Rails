@@ -1,7 +1,9 @@
+@import url('https://fonts.googleapis.com/css?family=Oxygen');
+
 .container {
   max-width: 960px;
   margin: 0 auto;
-
+  font-family: 'Oxygen', sans-serif;
 }
 
 #cover-image {
@@ -11,4 +13,93 @@
 #profile-image {
   max-height: 200px;
   max-width: 200px;
+}
+
+.thumb {
+  max-height: 20em;
+  max-width: 10em;
+  top:0;
+  bottom:0;
+  margin:auto;
+  // position:absolute;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.tasks {
+  border: 1px solid #ccc;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin-bottom: 10px;
+  height: 10em;
+  display: inline-block;
+  vertical-align: middle;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+span {
+  position:absolute;
+  padding-left: 30px;
+  display: inline-block;
+  vertical-align: middle;
+  padding-top: 20px;
+  p {
+    font-size: 18px;
+    font-family: 'Oxygen', sans-serif;
+
+  }
+}
+.tasks:hover{
+  background: #2280A8;
+  padding: 20px;
+}
+
+.tasks {
+  transition: all 0.5s ease;
+  background:#ADE8D6 ;
+  padding: 10px;
+  a{
+    text-decoration: none;
+  }
+
+}
+.navBar {
+  font-size: 22px;
+  padding: 10px;
+  display: inline-block;
+  color: grey;
+  text-decoration: none;
+  text-decoration: none;
+}
+
+
+.scoreButton {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 50px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    border-radius: 50%;
+    cursor:pointer;
+    background:url(/images/Btn.PNG) no-repeat;
+
+}
+
+.showTask {
+
+  img{
+    width:100%;
+    height:20%;
+
+  }
+  text-align: center;
 }

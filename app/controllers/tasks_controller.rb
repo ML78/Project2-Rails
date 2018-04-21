@@ -10,11 +10,14 @@ class TasksController < ApplicationController
   # GET /tasks/1
   # GET /tasks/1.json
   def show
+    @task = Task.find params[:id]
+
   end
 
   # GET /tasks/new
   def new
     @task = Task.new
+
   end
 
   # GET /tasks/1/edit
@@ -35,7 +38,12 @@ class TasksController < ApplicationController
         format.json { render json: @task.errors, status: :unprocessable_entity }
       end
     end
+    if @task.image?
+      cloudinary = Cloudinary::Uploader.upload(params[:task][:image])
+      @task.update :image => cloudinary['url']
+    end
   end
+
 
   # PATCH/PUT /tasks/1
   # PATCH/PUT /tasks/1.json
@@ -49,7 +57,13 @@ class TasksController < ApplicationController
         format.json { render json: @task.errors, status: :unprocessable_entity }
       end
     end
+    if @task.image?
+      cloudinary = Cloudinary::Uploader.upload(params[:task][:image])
+      @task.update :image => cloudinary['url']
+    end
   end
+
+
 
   # DELETE /tasks/1
   # DELETE /tasks/1.json
@@ -60,6 +74,45 @@ class TasksController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+
+  def shop
+    @tasks = Task.where(category: 'Shopping')
+    render :index
+  end
+  def food
+    @tasks = Task.where(category: 'Food & Drink')
+    render :index
+  end
+  def water
+    @tasks = Task.where(category: 'Water')
+    render :index
+  end
+  def waste
+    @tasks = Task.where(category: 'Waste')
+    render :index
+  end
+  def transport
+    @tasks = Task.where(category: 'Transport')
+    render :index
+  end
+  def energy
+    @tasks = Task.where(category: 'Energy')
+    render :index
+  end
+
+  def achievement
+    @task = Task.find(params[:id])
+    # type = params[:type]
+    # if type == "favorite"
+      @current_user.achievements.create :task => @task
+      redirect_to @task
+    # elsif type == "unfavorite"
+    #   @current_user.favorite_recipes.find_by(:recipe => @recipe).destroy
+    #     redirect_to @recipe
+    # end
+  end
+
 
   private
     # Use callbacks to share common setup or constraints between actions.

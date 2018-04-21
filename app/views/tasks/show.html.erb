@@ -1,28 +1,28 @@
-<p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @task.name %>
-</p>
+<div class="showTask">
+  <% if @task.image.present? %>
+   <%= image_tag @task.image, :alt => @task.name %>
+  <% end %>
 
-<p>
-  <strong>Description:</strong>
-  <%= @task.description %>
-</p>
+  <p><strong><%= @task.name %></strong></p>
 
-<p>
-  <strong>Image:</strong>
-  <%= @task.image %>
-</p>
-<p>
+  <p><strong><%= @task.description %></strong></p>
+  <div class="scoreDiv">
+
+      <p><strong>Score:</strong><%= @task.score %></p>
+      <%= button_to @task.score, achievement_task_path(@task), method: :put  , :class=> "scoreButton"%>
+  </div>
+
+
+</div>
+
+
+<!-- <p>
   <strong>Category:</strong>
   <%= @task.category %>
-</p>
+</p> -->
 
-<p>
-  <strong>Score:</strong>
-  <%= @task.score %>
-</p>
-
-<%= link_to 'Edit', edit_task_path(@task) %> |
+<% if @current_user.present? && @current_user.admin %>
+<%= link_to 'Edit', edit_task_path(@task) %>
+<% end %>
 <%= link_to 'Back', tasks_path %>
