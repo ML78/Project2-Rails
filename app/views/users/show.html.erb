@@ -1,6 +1,12 @@
 <p id="notice"><%= notice %></p>
 
 <p>
+  <% unless @user.image.empty? %>
+   <%= image_tag @user.image, :alt => @user.name, :id => 'profile-image'%>
+ <% end %>
+</p>
+
+<p>
   <strong>Name:</strong>
   <%= @user.name %>
 </p>
@@ -11,8 +17,9 @@
 </p>
 
 <p>
-  <strong>Image:</strong>
-  <%= @user.image %>
+  <% unless @user.image.empty? %>
+   <%= image_tag @user.image, :alt => @user.name, :id => 'profile-image'%>
+ <% end %>
 </p>
 
 <p>
@@ -26,4 +33,5 @@
 </p>
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
+<%= link_to 'Destroy', @user, method: :delete, data: { confirm: 'Are you sure?' } %> |
 <%= link_to 'Back', users_path %>
