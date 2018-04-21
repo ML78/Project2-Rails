@@ -1,5 +1,8 @@
 User.destroy_all
-u1 = User.create(:name => 'Admin', :email => 'admin@gmail.com', :location => 'Sydney', :password => 'admin', :admin => true)
+u1 = User.create(:name => 'Admin', :email => 'admin@gmail.com', :image => 'https://i.imgur.com/vedQYVM.jpg', :location => 'Sydney', :password => 'admin', :admin => true)
+u2 = User.create(:name => 'Julie', :email => 'julie@gmail.com', :image => 'https://i.imgur.com/3ukJaY7.jpg', :location => 'Sydney', :password => 'julie', :admin => false)
+u3 = User.create(:name => 'Monique', :email => 'monique@gmail.com', :image => 'https://i.imgur.com/d4ZN1sS.jpg', :location => 'Sydney', :password => 'monique', :admin => false)
+
 
 
 Task.destroy_all

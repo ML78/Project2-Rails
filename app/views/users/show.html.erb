@@ -11,8 +11,9 @@
 </p>
 
 <p>
-  <strong>Image:</strong>
-  <%= @user.image %>
+  <% unless @user.image.empty? %>
+   <%= image_tag @user.image, :alt => @user.name :id => 'profile-image'%>
+ <% end %>
 </p>
 
 <p>
