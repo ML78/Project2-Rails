@@ -17,6 +17,12 @@
 </p>
 
 <p>
+  <% unless @user.image.empty? %>
+   <%= image_tag @user.image, :alt => @user.name, :id => 'profile-image'%>
+ <% end %>
+</p>
+
+<p>
   <strong>Location:</strong>
   <%= @user.location %>
 </p>
