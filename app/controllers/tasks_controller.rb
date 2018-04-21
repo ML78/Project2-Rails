@@ -122,6 +122,6 @@ class TasksController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def task_params
-      params.require(:task).permit(:name, :description, :image, :category, :score, achievement_ids: [])
+      params.require(:task).permit(:name, :description, :image, :category, :score, user_ids: [], achievement_ids: [])
     end
 end
