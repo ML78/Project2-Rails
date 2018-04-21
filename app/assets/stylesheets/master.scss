@@ -1,5 +1,14 @@
 .container {
   max-width: 960px;
   margin: 0 auto;
-  
+
+}
+
+#cover-image {
+  background-image: asset-url('cover-img.jpg');
+}
+
+#profile-image {
+  max-height: 200px;
+  max-width: 200px;
 }
