@@ -16,7 +16,7 @@ Rails.application.routes.draw do
   resources :tasks
   resources :achievements
   resources :users
-
+  resources :charges
   get '/login' => 'session#new'        # Sign in form
   post '/login' => 'session#create'    # Sign in action
   delete '/login' => 'session#destroy' # Sign out
