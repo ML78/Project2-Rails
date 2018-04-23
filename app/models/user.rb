@@ -24,6 +24,7 @@ class User < ApplicationRecord
   geocoded_by :location
   after_validation :geocode
 
+
   #custom methods:
 
   def score
@@ -37,4 +38,9 @@ class User < ApplicationRecord
   def level
     (score/100).floor
   end
+
+  def badges
+    Badge.where('score <= ?',score)
+  end
+
 end

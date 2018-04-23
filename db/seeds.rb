@@ -31,6 +31,11 @@ t16 = Task.create(:name => 'Brush Smart', :description => 'Turn off the water wh
 t17 = Task.create(:name => 'Carpooling', :description => 'Share your next ride', :category => 'Transport', :score => 4)
 t18 = Task.create(:name => 'Wash Cold', :description => 'Wash your clothes in cold water', :category => 'Energy', :score => 3)
 
+Badge.destroy_all
+b1 = Badge.create(:image=>src="https://thumbs.dreamstime.com/z/eco-friendly-icon-18580641.jpg", :score=> 5)
+b2 = Badge.create(:image=>src="https://static5.depositphotos.com/1034557/479/i/950/depositphotos_4791833-stock-photo-eco-friendly-icon.jpg",:score=> 10)
+b3 = Badge.create(:image=>src="https://thumbs.dreamstime.com/z/eco-friendly-icon-18580641.jpg", :score=> 15)
+b4 = Badge.create(:image=>src="https://static5.depositphotos.com/1034557/479/i/950/depositphotos_4791833-stock-photo-eco-friendly-icon.jpg",:score=> 20)
 
 u2.tasks << t1
 u2.tasks << t2
