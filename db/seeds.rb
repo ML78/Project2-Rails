@@ -10,8 +10,8 @@ u7 = User.create(:image => 'https://i.imgur.com/b5d6bbL.jpg', :name => 'Joel', :
 Task.destroy_all
 t1 = Task.create(:name => 'Reusable Bottle', :description => 'Refill your reusable bottle', :category => 'Food & Drink', :score => 2, :image =>'http://res.cloudinary.com/dbenxy2yz/image/upload/v1524304487/c1by25q6k3y6hb8uwkpw.jpg')
 t2 = Task.create(:name => 'Leftovers', :description => 'Eat last nights dinner for lunch next day', :category => 'Food & Drink', :score => 3, :image => 'http://res.cloudinary.com/dyi0udlrl/image/upload/v1524463526/T020-00024-5.jpg')
-t3 = Task.create(:name => 'Meatless Day', :description => 'Swap the meat on your plate one day a week', :category => 'Food & Drink', :score => 2)
-t4 = Task.create(:name => 'Pint It', :description => 'Go for a pint instead of a bottled beer at your next bar visit', :category => 'Food & Drink', :score => 2)
+t3 = Task.create(:name => 'Meatless Day', :description => 'Swap the meat on your plate one day a week', :category => 'Food & Drink', :score => 2, :image => 'http://res.cloudinary.com/dyi0udlrl/image/upload/v1524464197/vegetable-plate-2.jpg')
+t4 = Task.create(:name => 'Pint It', :description => 'Go for a pint instead of a bottled beer at your next bar visit', :category => 'Food & Drink', :score => 2, :image => 'http://res.cloudinary.com/dyi0udlrl/image/upload/v1524464446/beerpint425.jpg')
 t5 = Task.create(:name => 'Shop local', :description => 'Shop fresh at your local market and avoid packaging', :category => 'Food & Drink', :score => 3)
 
 t6 = Task.create(:name => 'Keep Cup', :description => 'Buy a keep cup for your next coffee', :category => 'Shopping', :score => 3, :image =>'http://res.cloudinary.com/dbenxy2yz/image/upload/v1524290827/q4t439y1xvo6pqu4xvoa.jpg')
