@@ -24,4 +24,17 @@ class User < ApplicationRecord
   geocoded_by :location
   after_validation :geocode
 
+  #custom methods:
+
+  def score
+    total = 0
+    achievements.each do |a|
+      total += a.task.score
+    end
+    total
+  end
+
+  def level
+    (score/100).floor
+  end
 end

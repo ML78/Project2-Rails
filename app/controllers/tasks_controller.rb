@@ -103,14 +103,8 @@ class TasksController < ApplicationController
 
   def achievement
     @task = Task.find(params[:id])
-    # type = params[:type]
-    # if type == "favorite"
-      @current_user.achievements.create :task => @task
-      redirect_to @task
-    # elsif type == "unfavorite"
-    #   @current_user.favorite_recipes.find_by(:recipe => @recipe).destroy
-    #     redirect_to @recipe
-    # end
+    @current_user.achievements.create :task => @task
+    redirect_to @task
   end
 
 

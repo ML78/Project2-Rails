@@ -7,6 +7,8 @@ Rails.application.routes.draw do
   get '/tasks/transport' => 'tasks#transport'
   get '/tasks/energy' => 'tasks#energy'
 
+  get '/users/scoreboard' => 'users#scoreboard'
+
   root :to => 'users#new'
   get '/home' => 'pages#home'
 

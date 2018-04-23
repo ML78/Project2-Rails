@@ -126,3 +126,14 @@ nav{
   height: 400px;
   width: 50%;
 }
+
+#tableScore{
+  tr{
+    text-align: left;
+  }
+  th{
+    border-bottom: 1px solid grey;
+  }
+  border: 1px solid black;
+  border-radius: 5px;
+}
