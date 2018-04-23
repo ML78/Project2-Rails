@@ -8,6 +8,7 @@ class SessionController < ApplicationController
     @user = User.find_by :email => params[:email]
     if @user.present? && @user.authenticate(params[:password])
       session[:user_id] = @user.id
+      cookies.signed[:user_id] = @user.id
       redirect_to @user
     else
       flash[:error] = "Invalid email or password"
