@@ -22,3 +22,26 @@
 <% end %>
 
 <%= link_to 'Back', users_path %>
+
+<div class="container1">
+     <div id="column2">
+   <div id="map"></div>
+   <script>
+   function initMap() {
+     var location = {lat: <%= @user.latitude %> , lng: <%= @user.longitude %>};
+     var map = new google.maps.Map(document.getElementById('map'), {
+       zoom: 4,
+       center: location
+     });
+     var marker = new google.maps.Marker({
+       position: location,
+       map: map
+     });
+   }
+   </script>
+   <script async defer
+   src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDlFfN3j68LOw1bsZwi62WyOons6y3KZ9Q&callback=initMap">
+   </script>
+ </body>
+</html>
+</div>

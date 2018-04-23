@@ -87,8 +87,5 @@ class UsersController < ApplicationController
       end
     end
 
-    #custom methods from model
-    @user.score
-    @level = @user.level
-    @leaders = User.all.order(:level)
+
 end
