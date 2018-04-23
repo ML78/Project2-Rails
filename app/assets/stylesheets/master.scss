@@ -107,17 +107,6 @@ nav{
   text-align: center;
 }
 
-<<<<<<< HEAD
-#tableScore{
-  tr{
-    text-align: left;
-  }
-  th{
-    border-bottom: 1px solid grey;
-  }
-  border: 1px solid black;
-  border-radius: 5px;
-=======
 
 .container1 {
  display: flex;
@@ -136,5 +125,15 @@ nav{
 #map {
   height: 400px;
   width: 50%;
->>>>>>> 601c1395291ad124b4eab37df222735145df6716
+}
+
+#tableScore{
+  tr{
+    text-align: left;
+  }
+  th{
+    border-bottom: 1px solid grey;
+  }
+  border: 1px solid black;
+  border-radius: 5px;
 }
