@@ -39,7 +39,7 @@
          var gA = {lat:-33.87113, lng:151.203884};
           //users map
          var map = new google.maps.Map(document.getElementById('scoreboard-map'), {
-           zoom:5,
+           zoom:3.9,
            center: gA
          });
 
@@ -50,7 +50,7 @@
             '<div>' +
               '<div>Member: <%= user.name %></div>' +
               '<div">Location: <%= user.location %></div>' +
-              '<img src=<%= user.image %> alt="re" height="115" width="83">' +
+              '<img src=<%= user.image %> alt="re" height="100" width="120">' +
             '</div>'
          });
       <% end %>
@@ -61,12 +61,12 @@
              position:props.coords,
              map: map,
            });
-                                                                               //variable marker icon function
+
            if(props.iconImage){
              //set icon image
              marker.setIcon(props.iconImage);
            }
-                                                                               //check content
+
            if(props.content){
              let infoWindow = new google.maps.InfoWindow({
                content:props.content,
@@ -83,8 +83,5 @@
        }
      </script>
 
-     <script async defer
-     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDlFfN3j68LOw1bsZwi62WyOons6y3KZ9Q&callback=initMap">
-     </script>
   </div>
 </div>
