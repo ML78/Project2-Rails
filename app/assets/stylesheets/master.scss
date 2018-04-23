@@ -107,6 +107,7 @@ nav{
   text-align: center;
 }
 
+<<<<<<< HEAD
 #tableScore{
   tr{
     text-align: left;
@@ -116,4 +117,24 @@ nav{
   }
   border: 1px solid black;
   border-radius: 5px;
+=======
+
+.container1 {
+ display: flex;
+}
+#column2 {
+ flex: 2;
+ padding-top: 5em;
+}
+
+// #map {
+//  width: 500px;
+//  margin-left: auto;
+//  margin-right: auto;
+// }
+
+#map {
+  height: 400px;
+  width: 50%;
+>>>>>>> 601c1395291ad124b4eab37df222735145df6716
 }
