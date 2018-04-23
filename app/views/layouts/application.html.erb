@@ -21,10 +21,18 @@
         </div>
 
         <% if @current_user.present? && @current_user.admin %>
-            <%= link_to 'Home', home_path %>
-            <%= link_to 'Members', users_path %>
-            <%= link_to 'Create new Task', new_task_path %>
-            <%= link_to 'Achievements', achievements_path %>
+            <%= link_to 'Home', home_path, class:'navBar' %>
+            <%= link_to 'Members', users_path, class:'navBar' %>
+            <%= link_to 'Create new Task', new_task_path, class:'navBar' %>
+            <%= link_to 'Achievements', achievements_path, class:'navBar' %>
+            <%= link_to 'Tasks', tasks_path, class:'navBar'%>
+            <%= link_to 'Food & Drink', tasks_food_path ,class:'navBar'%>
+            <%= link_to 'Shopping', tasks_shop_path ,class:'navBar'%>
+            <%= link_to 'Water', tasks_water_path ,class:'navBar'%>
+            <%= link_to 'Waste', tasks_waste_path ,class:'navBar'%>
+            <%= link_to 'Transport', tasks_transport_path ,class:'navBar'%>
+            <%= link_to 'Energy', tasks_energy_path ,class:'navBar'%>
+            <%= link_to 'ScoreBoard', users_scoreboard_path ,class:'navBar'%>
           <% elsif @current_user.present? && !@current_user.admin%>
             <%= link_to 'Home', home_path ,class:'navBar'%>
             <%= link_to 'Tasks', tasks_path ,class:'navBar'%>
