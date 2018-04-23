@@ -61,12 +61,12 @@
              position:props.coords,
              map: map,
            });
-                                                                               //variable marker icon function
+        //variable marker icon function
            if(props.iconImage){
              //set icon image
              marker.setIcon(props.iconImage);
            }
-                                                                               //check content
+        //check content
            if(props.content){
              let infoWindow = new google.maps.InfoWindow({
                content:props.content,
@@ -83,8 +83,5 @@
        }
      </script>
 
-     <script async defer
-     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDlFfN3j68LOw1bsZwi62WyOons6y3KZ9Q&callback=initMap">
-     </script>
   </div>
 </div>
