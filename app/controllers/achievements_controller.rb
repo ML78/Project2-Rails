@@ -69,6 +69,6 @@ class AchievementsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def achievement_params
-      params.require(:achievement).permit(:task_id, :user_id)
+      params.require(:achievement).permit(:task_id, :user_id, :task_score)
     end
 end
