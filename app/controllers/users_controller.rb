@@ -69,6 +69,14 @@ class UsersController < ApplicationController
     end
   end
 
+  def scoreboard
+    # custom methods from model
+    # @users = User.all.sort_by(&:score).reverse # @user.score
+    @users = User.where.not(name: 'Admin').sort_by(&:score).reverse # @user.score
+    # @level = @user.level
+    # @leaders = User.all.order(:level)
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_user
@@ -87,8 +95,4 @@ class UsersController < ApplicationController
       end
     end
 
-    #custom methods from model
-    @user.score
-    @level = @user.level
-    @leaders = User.all.order(:level)
 end

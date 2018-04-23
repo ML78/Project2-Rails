@@ -29,8 +29,7 @@ class User < ApplicationRecord
   def score
     total = 0
     achievements.each do |a|
-      #total += a.points
-      total += a.task_score
+      total += a.task.score
     end
     total
   end

@@ -1,0 +1,28 @@
+
+
+
+<% if @current_user.present? %>
+  <h2>Your score is: <%= @current_user.score %></h2>
+<% end %>
+
+<table id= "tableScore">
+  <thead>
+    <tr>
+      <th>User</th>
+      <th>Location</th>
+      <th>Score</th>
+      <th colspan=3></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <p></p><% @users.each do |user| %>
+        <tr>
+          <td><%= user.name %></td>
+          <td><%= user.location %></td>
+          <td><%= user.score %></td>
+        </tr>
+    <% end %>
+
+  </tbody>
+</table>
