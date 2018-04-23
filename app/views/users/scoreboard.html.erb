@@ -39,7 +39,7 @@
          var gA = {lat:-33.87113, lng:151.203884};
           //users map
          var map = new google.maps.Map(document.getElementById('scoreboard-map'), {
-           zoom:5,
+           zoom:3.9,
            center: gA
          });
 
@@ -61,12 +61,12 @@
              position:props.coords,
              map: map,
            });
-        //variable marker icon function
+
            if(props.iconImage){
              //set icon image
              marker.setIcon(props.iconImage);
            }
-        //check content
+
            if(props.content){
              let infoWindow = new google.maps.InfoWindow({
                content:props.content,
