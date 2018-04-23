@@ -1,5 +1,13 @@
 <p id="notice"><%= notice %></p>
 
+    <div class ="badges">
+      <% @user.badges.each do |b| %>
+        <%= image_tag b.image, :alt => b.description, :class => 'thumb1' %>
+      <% end %>
+    </div>
+
+    <!-- `Badge.where('score <= ?', @user.score)` -->
+
 <p>
   <% if @user.image.present? %>
    <%= image_tag @user.image, :alt => @user.name, :id => 'profile-image'%>

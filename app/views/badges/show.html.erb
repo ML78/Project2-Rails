@@ -1,0 +1,22 @@
+<p id="notice"><%= notice %></p>
+
+<!-- <p>
+  <strong>Image:</strong>
+  <%= @badge.image %>
+</p> -->
+
+<% if @badge.image.present? %>
+ <%= image_tag @badge.image, :alt => @badge.description,:class => "thumb1" %>
+<% end %>
+<p>
+  <strong>Score:</strong>
+  <%= @badge.score %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @badge.description %>
+</p>
+
+<%= link_to 'Edit', edit_badge_path(@badge) %> |
+<%= link_to 'Back', badges_path %>
