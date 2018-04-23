@@ -8,26 +8,26 @@ u6 = User.create(:image => 'https://i.imgur.com/27CRqKG.jpg', :name => 'Theo', :
 u7 = User.create(:image => 'https://i.imgur.com/b5d6bbL.jpg', :name => 'Joel', :email => 'joel@gmail.com', :location => 'Hobart', :password => 'joel', :admin => false)
 
 Task.destroy_all
-t1 = Task.create(:name => 'Reusable Bottle', :description => 'Refill your reusable bottle', :category => 'Food & Drink', :score => 2, :image=>'http://res.cloudinary.com/dbenxy2yz/image/upload/v1524304487/c1by25q6k3y6hb8uwkpw.jpg')
-t2 = Task.create(:name => 'Leftovers', :description => 'Eat last nights dinner for lunch next day', :category => 'Food & Drink', :score => 3)
+t1 = Task.create(:name => 'Reusable Bottle', :description => 'Refill your reusable bottle', :category => 'Food & Drink', :score => 2, :image =>'http://res.cloudinary.com/dbenxy2yz/image/upload/v1524304487/c1by25q6k3y6hb8uwkpw.jpg')
+t2 = Task.create(:name => 'Leftovers', :description => 'Eat last nights dinner for lunch next day', :category => 'Food & Drink', :score => 3, :image => 'http://res.cloudinary.com/dyi0udlrl/image/upload/v1524463526/T020-00024-5.jpg')
 t3 = Task.create(:name => 'Meatless Day', :description => 'Swap the meat on your plate one day a week', :category => 'Food & Drink', :score => 2)
 t4 = Task.create(:name => 'Pint It', :description => 'Go for a pint instead of a bottled beer at your next bar visit', :category => 'Food & Drink', :score => 2)
 t5 = Task.create(:name => 'Shop local', :description => 'Shop fresh at your local market and avoid packaging', :category => 'Food & Drink', :score => 3)
 
-t6 = Task.create(:name => 'Keep Cup', :description => 'Buy a keep cup for your next coffee', :category => 'Shopping', :score => 3, :image=>'http://res.cloudinary.com/dbenxy2yz/image/upload/v1524290827/q4t439y1xvo6pqu4xvoa.jpg')
+t6 = Task.create(:name => 'Keep Cup', :description => 'Buy a keep cup for your next coffee', :category => 'Shopping', :score => 3, :image =>'http://res.cloudinary.com/dbenxy2yz/image/upload/v1524290827/q4t439y1xvo6pqu4xvoa.jpg')
 t7 = Task.create(:name => 'Reusable Bag', :description => 'Get a reusable bag and score points every time you say no to a plastic bag', :category => 'Shopping', :score => 3)
 t8 = Task.create(:name => 'Shop Secondhand', :description => 'Buy secondhand instead of new items', :category => 'Shopping', :score => 4)
 t9 = Task.create(:name => 'Go Topless', :description => 'Ditch the lid or straw on your bevarage', :category => 'Shopping', :score => 2)
 t10 = Task.create(:name => 'Rag it', :description => 'Use a rag instead of paper-towels when possible', :category => 'Shopping', :score => 1)
 
-t11 = Task.create(:name => 'Silver Spoon', :description => 'Pack your cutlery for your next lunch', :category => 'Waste', :score => 2,:image=>'http://res.cloudinary.com/dbenxy2yz/image/upload/v1524290881/qzwhp9yxuresyclm8jyx.jpg')
+t11 = Task.create(:name => 'Silver Spoon', :description => 'Pack your cutlery for your next lunch', :category => 'Waste', :score => 2,:image =>'http://res.cloudinary.com/dbenxy2yz/image/upload/v1524290881/qzwhp9yxuresyclm8jyx.jpg')
 t12 = Task.create(:name => 'Feed The Worms', :description => 'Earn points for every time you compost your food waste', :category => 'Waste', :score => 2)
 t13 = Task.create(:name => 'Online Billing', :description => 'Switch to online billing and save paper', :category => 'Waste', :score => 2)
 t14 = Task.create(:name => 'Recycle', :description => 'Make sure your recyclable waste goes to the right bin', :category => 'Waste', :score => 3)
 t15 = Task.create(:name => 'Electronic Exit', :description => 'Recycle your old electronics and save the earth from rare metals', :category => 'Waste', :score => 4)
 
 
-t16 = Task.create(:name => 'Brush Smart', :description => 'Turn off the water when brushing your teeth', :category => 'Water', :score => 2,:image=>'http://res.cloudinary.com/dbenxy2yz/image/upload/v1524290845/zve586ior13pyesycfmc.png')
+t16 = Task.create(:name => 'Brush Smart', :description => 'Turn off the water when brushing your teeth', :category => 'Water', :score => 2,:image =>'http://res.cloudinary.com/dbenxy2yz/image/upload/v1524290845/zve586ior13pyesycfmc.png')
 t17 = Task.create(:name => 'Quick Showers', :description => 'Save water by reducing your time in the shower', :category => 'Water', :score => 3)
 t18 = Task.create(:name => 'Fill It Up', :description => 'Do not run your dishwasher unless it is full', :category => 'Water', :score => 2)
 t19 = Task.create(:name => 'No Dripping', :description => 'Fix your dripping taps and save many liters of water per day', :category => 'Water', :score => 4)
