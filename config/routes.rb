@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :messages
   resources :badges
   get '/tasks/food' => 'tasks#food'
   get '/tasks/shop' => 'tasks#shop'
