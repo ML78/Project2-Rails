@@ -26,3 +26,65 @@
 
   </tbody>
 </table>
+
+
+<div class="container1">
+  <h2>Members' Map</h2>
+    <div id="column2">
+     <div id="scoreboard-map"></div>
+
+       <script>
+       function initMap() {
+          //GA location
+         var gA = {lat:-33.87113, lng:151.203884};
+          //users map
+         var map = new google.maps.Map(document.getElementById('scoreboard-map'), {
+           zoom:5,
+           center: gA
+         });
+
+      <% User.all.each do |user| %>
+         addMarker({
+           coords:{lat:<%= user.latitude %>,lng:<%= user.longitude %>},
+           content:
+            '<div>' +
+              '<div>Member: <%= user.name %></div>' +
+              '<div">Location: <%= user.location %></div>' +
+              '<img src=<%= user.image %> alt="re" height="115" width="83">' +
+            '</div>'
+         });
+      <% end %>
+
+         // add Marker function
+         function addMarker(props){
+           var marker = new google.maps.Marker({
+             position:props.coords,
+             map: map,
+           });
+                                                                               //variable marker icon function
+           if(props.iconImage){
+             //set icon image
+             marker.setIcon(props.iconImage);
+           }
+                                                                               //check content
+           if(props.content){
+             let infoWindow = new google.maps.InfoWindow({
+               content:props.content,
+                 maxWidth: 100,
+                 maxHeight: 100
+
+             });
+
+             marker.addListener('click', function(){
+               infoWindow.open(map, marker);
+             });
+           }
+         }
+       }
+     </script>
+
+     <script async defer
+     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDlFfN3j68LOw1bsZwi62WyOons6y3KZ9Q&callback=initMap">
+     </script>
+  </div>
+</div>
