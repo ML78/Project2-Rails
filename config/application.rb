@@ -27,5 +27,8 @@ module Project2Rails
 
     # Don't generate system test files.
     config.generators.system_tests = nil
+
+    config.action_cable.mount_path = '/cable'
+
   end
 end
