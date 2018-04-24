@@ -1,0 +1,13 @@
+<div class="message">
+  <p>
+    <small><em>Created <%= time_ago_in_words(message.created_at) %> ago</em></small>
+  </p>
+  <p>
+
+    <%= image_tag message.user.image, :id => 'profile-image' %>
+    <strong><%= message.user.name %></strong>
+    <span class="content">
+      <%= message.content %>
+    </span>
+  </p>
+</div>

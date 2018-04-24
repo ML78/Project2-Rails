@@ -1,8 +1,10 @@
 <p id="notice"><%= notice %></p>
 
     <div class ="badges">
-      <% @user.badges.each do |b| %>
-        <%= image_tag b.image, :alt => b.description, :class => 'thumb1' %>
+      <% if @user.badges.present?%>
+        <% @user.badges.each do |b| %>
+          <%= image_tag b.image, :alt => b.description, :class => 'thumb1' %>
+        <% end %>
       <% end %>
     </div>
 
@@ -31,23 +33,13 @@
 
 <%= link_to 'Back', users_path %>
 
+<section class="stats">
+    <%= render 'shared/stats' %>
+       </section>
+     <section>
+        <%= render 'follow_form' if @current_user.present?  %>
+</section>
 
-<div class="container1">
-  <div id="column2">
-   <div id="user-map"></div>
-   <script>
-   function initMap() {
-     var location = {lat: <%= @user.latitude %> , lng: <%= @user.longitude %>};
-     var map = new google.maps.Map(document.getElementById('user-map'), {
-       zoom: 4,
-       center: location
-     });
-     var marker = new google.maps.Marker({
-       position: location,
-       map: map
-     });
-   }
-   </script>
 
   </div>
 </div>
