@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
   resources :relationships
-  resources :messages
+
   resources :badges
   get '/tasks/food' => 'tasks#food'
   get '/tasks/shop' => 'tasks#shop'
@@ -18,7 +18,8 @@ Rails.application.routes.draw do
   resources :tasks
   resources :achievements
   resources :users
-
+  resources :charges
+  resources :events
   get '/login' => 'session#new'        # Sign in form
   post '/login' => 'session#create'    # Sign in action
   delete '/login' => 'session#destroy' # Sign out
@@ -40,6 +41,5 @@ Rails.application.routes.draw do
   get '/chat' => 'chatrooms#show'
 
   resources :messages, only: [:create]
-
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
