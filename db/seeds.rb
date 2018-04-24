@@ -3,7 +3,7 @@ u1 = User.create(:image => 'https://i.imgur.com/vedQYVM.jpg', :name => 'Admin', 
 u2 = User.create(:image => 'https://i.imgur.com/3ukJaY7.jpg', :name => 'Julie', :email => 'julie@gmail.com', :location => 'Brisbane', :password => 'julie', :admin => false)
 u3 = User.create(:image => 'https://i.imgur.com/d4ZN1sS.jpg?1', :name => 'Monique', :email => 'monique@gmail.com', :location => 'Melbourne', :password => 'monique', :admin => false)
 u4 = User.create(:image => 'https://i.imgur.com/Dms8wUV.jpg', :name => 'Sarabjit', :email => 'sarabjit@gmail.com', :location => 'Sydney', :password => 'sarabjit', :admin => false)
-u5 = User.create(:image => 'https://i.imgur.com/jYVkwxD.jpg', :name => 'John', :email => 'john@gmail.com', :location => 'Adelaide', :password => 'john', :admin => false)
+u5 = User.create(:image => 'https://i.imgur.com/jYVkwxD.jpg', :name => 'John', :email => 'john@gmail.com', :location => 'Sydney', :password => 'john', :admin => false)
 u6 = User.create(:image => 'https://i.imgur.com/27CRqKG.jpg', :name => 'Theo', :email => 'theo@gmail.com', :location => 'Auckland', :password => 'theo', :admin => false)
 u7 = User.create(:image => 'https://i.imgur.com/b5d6bbL.jpg', :name => 'Joel', :email => 'joel@gmail.com', :location => 'Hobart', :password => 'joel', :admin => false)
 

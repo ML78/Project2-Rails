@@ -17,6 +17,7 @@ Rails.application.routes.draw do
   resources :achievements
   resources :users
   resources :charges
+  resources :events
   get '/login' => 'session#new'        # Sign in form
   post '/login' => 'session#create'    # Sign in action
   delete '/login' => 'session#destroy' # Sign out
@@ -28,8 +29,6 @@ Rails.application.routes.draw do
     end
     put :achievement, on: :member
   end
-
-  mount ActionCable.server => '/cable'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
