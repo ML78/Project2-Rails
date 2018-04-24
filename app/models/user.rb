@@ -55,8 +55,6 @@ def feed
  end
 
 
-
-
   #custom methods for score, levels and badges:
 
   def score
