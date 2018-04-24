@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :relationships
+  resources :messages
   resources :badges
   get '/tasks/food' => 'tasks#food'
   get '/tasks/shop' => 'tasks#shop'
@@ -21,6 +23,11 @@ Rails.application.routes.draw do
   post '/login' => 'session#create'    # Sign in action
   delete '/login' => 'session#destroy' # Sign out
 
+  resources :users do
+    member do
+      get :following, :followers
+    end
+  end
 
   resources :tasks do
     member do
