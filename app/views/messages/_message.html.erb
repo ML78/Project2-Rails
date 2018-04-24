@@ -3,7 +3,9 @@
     <small><em>Created <%= time_ago_in_words(message.created_at) %> ago</em></small>
   </p>
   <p>
-    <strong><%= message.chef.chefname.capitalize %></strong>
+
+    <%= image_tag message.user.image, :id => 'profile-image' %>
+    <strong><%= message.user.name.capitalize %></strong>
     <span class="content">
       <%= message.content %>
     </span>
