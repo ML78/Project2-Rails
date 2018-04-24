@@ -44,6 +44,7 @@
          });
 
       <% User.all.each do |user| %>
+        next unless user.latitude.present? && user.longitude.present?
          addMarker({
            coords:{lat:<%= user.latitude %>,lng:<%= user.longitude %>},
            content:
