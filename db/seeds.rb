@@ -82,3 +82,11 @@ u7.tasks << t27
 u7.tasks << t28
 u7.tasks << t29
 u7.tasks << t30
+
+
+users = User.all
+user  = users.first
+following = users.take(2)
+followers = users.take(5).drop(2)
+following.each { |followed| user.follow(followed) }
+followers.each { |follower| follower.follow(user) }
