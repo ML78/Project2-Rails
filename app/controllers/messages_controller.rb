@@ -33,7 +33,7 @@ class MessagesController < ApplicationController
 
     if @message.save
       ActionCable.server.broadcast 'chatroom_channel', message: render_message(@message),
-                                                        user: @message.user.username
+                                                        user: @message.user.name
     else
       render 'chatrooms/show'
     end
@@ -86,7 +86,7 @@ class MessagesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def message_params
-      params.require(:message).permit(:user_id, :content)
+      params.require(:message).permit(:user_id, :content, :user_name)
     end
 
     def render_message(message)
