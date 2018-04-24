@@ -19,11 +19,14 @@ class User < ApplicationRecord
   has_secure_password
   has_many :achievements
   has_many :tasks, :through => :achievements
-  validates :email, :presence => true, :uniqueness => true
+  has_many :messages, dependent: :destroy
+
   validates :name, :presence => true
+  validates :email, :presence => true, :uniqueness => true
+  validates :password, :presence => true
+
   geocoded_by :location
   after_validation :geocode
-
 
   #custom methods:
 
