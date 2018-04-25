@@ -32,12 +32,14 @@ class MessagesController < ApplicationController
     @message.user = @current_user
 
     if @message.save
+      # redirect_to chat_path
       ActionCable.server.broadcast 'chatroom_channel', message: render_message(@message),
                                                         user: @message.user.name
     else
       render 'chatrooms/show'
     end
   end
+  #ActionCable broadcasts the message (when it is created and saved) to the chatroom_channel which it streams from.
 
 
 
@@ -92,5 +94,6 @@ class MessagesController < ApplicationController
     def render_message(message)
       render(partial: 'message', locals: { message: message } )
     end
+    #renders message partial under views/messages/_message.html.erb
 
 end

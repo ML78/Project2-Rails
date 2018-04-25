@@ -18,5 +18,6 @@ class Message < ApplicationRecord
   def self.most_recent
     order(:created_at).last(20)
   end
+  # restricts how many messages are shown - chatrooms_controller picks up most_recent
 
 end

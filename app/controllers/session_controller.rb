@@ -2,7 +2,8 @@ class SessionController < ApplicationController
   def new
   end
 
-#add session according to user authentication
+#add session according to user authentication.
+#add cookies for ActionCable connection.
 
   def create
     @user = User.find_by :email => params[:email]
