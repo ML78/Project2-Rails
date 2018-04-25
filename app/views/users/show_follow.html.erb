@@ -5,15 +5,14 @@
             <section class="stats">
             <% if @user.image.present?%>
             <div class="circle-img">
-              <%= image_tag @user.image, :alt => @user.name%>
+               <%= render 'shared/stats' %>
             </div>
             <% end %>
             <h1><%= @user.name %></h1>
             <span><%= link_to "view my profile", @user %></span>
           </section>
-          <section class="stats">
         </aside>
-
+      </div>
 
     <div class="container">
       <% if @users.any? %>
@@ -22,16 +21,4 @@
         <% end %>
       </div>
     <% end %>
-    </section>
-  </aside>
-
-  <div class="col-md-8">
-    <h3><%= @title %></h3>
-    <% if @users.any? %>
-      <ul class="users follow">
-        <%= render @users %>
-      </ul>
-      <%= will_paginate %>
-    <% end %>
   </div>
-</div>

@@ -14,7 +14,6 @@ class RelationshipsController < ApplicationController
 
   # GET /relationships/new
   def new
-    @relationship = Relationship.new
   end
 
   # GET /relationships/1/edit
@@ -24,40 +23,24 @@ class RelationshipsController < ApplicationController
   # POST /relationships
   # POST /relationships.json
   def create
-    @relationship = Relationship.new(relationship_params)
 
-    respond_to do |format|
-      if @relationship.save
-        format.html { redirect_to @relationship, notice: 'Relationship was successfully created.' }
-        format.json { render :show, status: :created, location: @relationship }
-      else
-        format.html { render :new }
-        format.json { render json: @relationship.errors, status: :unprocessable_entity }
-      end
-    end
-  end
+    user = User.find(params[:followed_id])
+    @current_user.follow(user)
+    redirect_to user
+
 
   # PATCH/PUT /relationships/1
   # PATCH/PUT /relationships/1.json
   def update
-    respond_to do |format|
-      if @relationship.update(relationship_params)
-        format.html { redirect_to @relationship, notice: 'Relationship was successfully updated.' }
-        format.json { render :show, status: :ok, location: @relationship }
-      else
-        format.html { render :edit }
-        format.json { render json: @relationship.errors, status: :unprocessable_entity }
-      end
-    end
+
   end
 
   # DELETE /relationships/1
   # DELETE /relationships/1.json
   def destroy
-    @relationship.destroy
-    respond_to do |format|
-      format.html { redirect_to relationships_url, notice: 'Relationship was successfully destroyed.' }
-      format.json { head :no_content }
+    user = Relationship.find(params[:id]).followed
+    @current_user.unfollow(user)
+    redirect_to user
     end
   end
 

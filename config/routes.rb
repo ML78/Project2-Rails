@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  resources :relationships
+  resources :relationships, only: [:create, :destroy]
 
   resources :badges
   get '/tasks/food' => 'tasks#food'
