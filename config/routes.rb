@@ -12,7 +12,8 @@ Rails.application.routes.draw do
 
   get '/users/scoreboard' => 'users#scoreboard'
 
-  root :to => 'users#new'
+  # root :to => 'users#new'
+  root :to => 'session#new'
   get '/home' => 'pages#home'
 
   resources :tasks

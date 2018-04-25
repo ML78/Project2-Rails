@@ -7,15 +7,23 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
   <body>
     <div class="container">
 
         <%= render 'layouts/navigation' %>
+        
 
-        <%= yield %>
+        <!-- <canvas id="confetti"></canvas> -->
+
+        <!-- <div id="party-info"> -->
+          <%= yield %>
+        <!-- </div> -->
+
     </div>
 
     <%= render 'layouts/footer' %>
+    <%= render 'layouts/disp' %>
+
   </body>
+
 </html>

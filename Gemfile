@@ -34,6 +34,7 @@ gem 'cloudinary'
 gem 'geocoder'
 gem 'stripe'
 gem 'nokogiri'
+gem 'three'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

@@ -1,5 +1,8 @@
 <h2>EVENTS</h2>
 
 <div id="events">
-  <div><%== @ecoexpo %></div>
+  <% @ecoexpo.each do |eco| %>
+    <div><%== eco%></div>
+  <% end %>
+
 </div>
