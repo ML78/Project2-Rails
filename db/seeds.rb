@@ -47,10 +47,12 @@ t29 = Task.create(:name => 'Switch For LED', :description => 'Upgrade your light
 t30 = Task.create(:name => 'Sunshine', :description => 'Let the sun shine in and warm up your home', :category => 'Energy', :score => 1, :image => 'http://res.cloudinary.com/dyi0udlrl/image/upload/v1524478369/4554049_700x448.jpg')
 
 Badge.destroy_all
-b1 = Badge.create(:image=>src="https://thumbs.dreamstime.com/z/eco-friendly-icon-18580641.jpg", :score=> 5)
-b2 = Badge.create(:image=>src="https://static5.depositphotos.com/1034557/479/i/950/depositphotos_4791833-stock-photo-eco-friendly-icon.jpg",:score=> 10)
-b3 = Badge.create(:image=>src="https://thumbs.dreamstime.com/z/eco-friendly-icon-18580641.jpg", :score=> 15)
-b4 = Badge.create(:image=>src="https://static5.depositphotos.com/1034557/479/i/950/depositphotos_4791833-stock-photo-eco-friendly-icon.jpg",:score=> 20)
+b1 = Badge.create(:image=>src="http://res.cloudinary.com/dbenxy2yz/image/upload/v1524647488/5.png", :score=> 5)
+b2 = Badge.create(:image=>src="http://res.cloudinary.com/dbenxy2yz/image/upload/v1524647644/qpa5ape421o6cobm8ttr.png",:score=> 10)
+b3 = Badge.create(:image=>src="http://res.cloudinary.com/dbenxy2yz/image/upload/v1524647658/s1u1aih46b86vm4tnplv.png", :score=> 15)
+b4 = Badge.create(:image=>src="http://res.cloudinary.com/dbenxy2yz/image/upload/v1524647680/j8tngovpynoaa3cynaz2.png",:score=> 20)
+b4 = Badge.create(:image=>src="http://res.cloudinary.com/dbenxy2yz/image/upload/v1524647701/d1aqo44pqm1elcpgo4ek.png",:score=> 25)
+b4 = Badge.create(:image=>src="https://cloudinary.com/console/media_library/asset/image/upload/6b",:score=> 30)
 
 u2.tasks << t1
 u2.tasks << t2
