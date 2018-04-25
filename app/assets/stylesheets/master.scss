@@ -323,16 +323,54 @@ td {
 
 //css for navigation
 
-header img{
-  height: 8em;
-  display:inline-block;
-  float:left;
-}
+header {
+  img{
+    height: 8em;
+    // float:left;
+    position: absolute;
+    left: 190px;
+    top:20px;
+  }
 
+}
 .navBarTop {
   vertical-align: right;
   text-align: right;
+
 }
+
+.signIn,.signUp {
+  margin-top: 12em;
+  font-size: 15px;
+  form {
+    label{
+      font-weight: bold;
+    }
+    button{
+      padding: 20px;
+    }
+    input {
+      font-size: 15px;
+      padding: 6px 6px;
+      border-radius: 5px;
+      line-height: 2px;
+      box-sizing: border-box;
+      margin-top: 6px;
+      margin-bottom: 16px;
+    }
+
+    .buttonsubmit {
+      padding: 15px;
+    }
+
+  }
+
+  // display: block;
+  // border: 1px solid black;
+
+
+}
+
 
 
 .showFilterNav {
@@ -356,7 +394,7 @@ header img{
 
 // css for EVENTS
 .views-row{
-  
+
 }
 
 .views-row-first{
