@@ -88,4 +88,8 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+
+  config.web_socket_server_url = "wss://ecosmart-app.herokuapp.com/cable"
+  config.action_cable.allowed_request_origins = ['https://ecosmart-app.herokuapp.com', 'http://ecosmart-app.herokuapp.com']
+
 end
