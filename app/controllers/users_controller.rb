@@ -47,6 +47,9 @@ class UsersController < ApplicationController
     end
   end
 
+  # add session for user authentication.
+  # add cookies add cookies for ActionCable connection.
+
   # PATCH/PUT /users/1
   # PATCH/PUT /users/1.json
   def update

@@ -1,4 +1,14 @@
 
+  <div class="showFilterNav">
+    <%= link_to 'Food & Drink', tasks_food_path ,class:'showFilter'%>
+    <%= link_to 'Shopping', tasks_shop_path ,class:'showFilter'%>
+    <%= link_to 'Water', tasks_water_path ,class:'showFilter'%>
+    <%= link_to 'Waste', tasks_waste_path ,class:'showFilter'%>
+    <%= link_to 'Transport', tasks_transport_path ,class:'showFilter'%>
+    <%= link_to 'Energy', tasks_energy_path ,class:'showFilter'%>
+  </div>
+
+
 
 <div class = "allTasks">
 
@@ -10,7 +20,8 @@
         <div class = "tasks">
          <%= image_tag(task.image, :alt => task.name,:class => "thumb") %>
         <span>
-          <p><%= task.name %> - <%= task.description %></p>
+          <p><%= task.name %></p>
+          <p><%= task.description %></p>
         </span>
        </div>
       <% end %>

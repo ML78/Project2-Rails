@@ -12,7 +12,8 @@ Rails.application.routes.draw do
 
   get '/users/scoreboard' => 'users#scoreboard'
 
-  root :to => 'users#new'
+  # root :to => 'users#new'
+  root :to => 'session#new'
   get '/home' => 'pages#home'
 
   resources :tasks
@@ -39,7 +40,11 @@ Rails.application.routes.draw do
 
   mount ActionCable.server => '/cable'
   get '/chat' => 'chatrooms#show'
+  # This exposes the path for the cable items. It is the route which the client
+  # (browser) will call in order to make the webscocket connection with the server
+  # (which is where the actioncable server will be mounted).
 
   resources :messages, only: [:create]
+
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

@@ -29,6 +29,10 @@ module Project2Rails
     config.generators.system_tests = nil
 
     config.action_cable.mount_path = '/cable'
+    # This shows where the path will be in which the cable items will be exposed
+    # It is the route which the client (browser) will call in order to make the
+    # webscocket connection with the server
+    # (which is where the actioncable server will be mounted).
 
   end
 end
