@@ -1,5 +1,5 @@
 class ApplicationController < ActionController::Base
-  protect_from_forgery with: :exception
+  #protect_from_forgery with: :exception
 
 # Set up sessions for logged-in users authorisation
 # Set up admin for higher level authorisation
