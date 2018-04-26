@@ -32,12 +32,13 @@ class MessagesController < ApplicationController
     @message.user = @current_user
 
     if @message.save
-      # redirect_to chat_path
+      # redirect_to forum_path
       ActionCable.server.broadcast 'chatroom_channel', message: render_message(@message),
                                                         user: @message.user.name
     else
       render 'chatrooms/show'
     end
+      redirect_to forum_path
   end
   #ActionCable broadcasts the message (when it is created and saved) to the chatroom_channel which it streams from.
 
