@@ -1,15 +1,17 @@
 
+
 <div class="showTask">
+  <canvas id="celebration"></canvas>
   <% if @task.image.present? %>
    <%= image_tag @task.image, :alt => @task.name, :class => ".showImage" %>
   <% end %>
   <div class="desc">
     <p><strong><%= @task.name %></strong></p>
-
     <p><%= @task.description %></p>
     <div class="scoreDiv">
         <!-- <p><strong>Score:</strong><%= @task.score %></p> -->
-        <%= button_to @task.score, achievement_task_path(@task), method: :put , :id=>"buttonScore" , :class=> "scoreButton" %>
+        <%= button_to @task.score, achievement_task_path(@task), method: :put , :id=>"buttonScore" , :class=> "scoreButton",remote: true %>
+
     </div>
   </div>
 

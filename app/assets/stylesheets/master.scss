@@ -53,14 +53,14 @@ body{
   }
 
   .desc {
-  display: flex;
-  flex-direction: column;
-   justify-content: left;
-  div{
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
+    justify-content: left;
+  div {
+      display: flex;
+      justify-content: space-around;
     }
-    p{
+    p {
       font-family: 'Dosis', sans-serif;
       font-size: 18px;
       display: flex;
@@ -250,13 +250,13 @@ width: 100%;
   th {
     background-color: white;
     text-align: center;
-  }
+    }
 td {
   padding: 20px;
   img{
     height: 3em;
     width:3em;
-  }
+    }
   }
 }
 
@@ -270,7 +270,7 @@ td {
 .badges {
   display: inline-block;
   vertical-align: top;
-  img{
+  img {
     height: 3em;
     width:3em;
   }
@@ -324,14 +324,14 @@ td {
     vertical-align: top;
   }
 }
-.pay{
+.pay {
   display: block;
 }
 
 //css for navigation
 
 header {
-  img{
+  img {
     height: 8em;
     float:left;
     // position: absolute;
@@ -343,11 +343,14 @@ header {
 .navBarTop {
   vertical-align: right;
   text-align: right;
+  a:hover {
+    background: black;
+  }
 
 }
 
 .signIn,.signUp {
-  margin-top: 12em;
+  margin-top: 2em;
   font-size: 15px;
   clear:left;
   form {
@@ -392,7 +395,23 @@ header {
     background-color: #ddd;
     color: black;
   }
+  .showFilter.active {
+    background-color: #ddd;
+    color: black;
+  }
 
 }
 
-// css for EVENTS
+// css for
+
+
+canvas {
+  display: none;
+  width: 600px;
+  height: 600px;
+  margin: 0 auto;
+  position: absolute;
+  z-index: 1;
+}
+
+/// confeitti
