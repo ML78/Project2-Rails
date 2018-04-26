@@ -57,17 +57,17 @@
            var gA = {lat:-33.87113, lng:151.203884};
             //users map
            var map = new google.maps.Map(document.getElementById('scoreboard-map'), {
-             zoom:3.9,
+             zoom: 11,
              center: gA
            });
 
         <% User.all.each do |user| %>
-          next unless user.latitude.present? && user.longitude.present?
+
            addMarker({
              coords:{lat:<%= user.latitude %>,lng:<%= user.longitude %>},
              content:
               '<div>' +
-                '<div>Member: <%= user.name %></div>' +
+                '<div>Member: <%= link_to user.name, user %></div>' +
                 '<div">Location: <%= user.location %></div>' +
                 '<img src=<%= user.image %> alt="re" height="100" width="120">' +
               '</div>'
