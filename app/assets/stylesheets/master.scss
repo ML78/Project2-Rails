@@ -1,11 +1,6 @@
 
 
 @import url('https://fonts.googleapis.com/css?family=Dosis');
-
-.allTasks a {
-  text-decoration: none;
-}
-
 body{
   font-family: 'Dosis', sans-serif;
 }
@@ -331,10 +326,10 @@ td {
 header {
   img{
     height: 8em;
-    float:left;
-    // position: absolute;
-    // left: 190px;
-    // top:20px;
+    // float:left;
+    position: absolute;
+    left: 190px;
+    top:20px;
   }
 
 }
@@ -347,7 +342,6 @@ header {
 .signIn,.signUp {
   margin-top: 12em;
   font-size: 15px;
-  clear:left;
   form {
     label{
       font-weight: bold;
@@ -370,6 +364,9 @@ header {
     }
 
   }
+
+  // display: block;
+  // border: 1px solid black;
 
 
 }
@@ -394,3 +391,58 @@ header {
 }
 
 // css for EVENTS
+.views-row{
+
+}
+
+.views-row-first{
+
+}
+.date-display-range{
+
+}
+
+.col-md-8 {
+  text-align: center;
+}
+
+#profile-image-round {
+  height: 100px;
+  width: 120px;
+  vertical-align: middle;
+}
+
+#column1 {
+ flex: 1;
+}
+
+#column3 {
+ flex: 2;
+ text-align: center;
+}
+
+
+h3 {
+  font-size: 25px;
+  color: #333;
+  font-family: 'Dosis', sans-serif;
+
+}
+
+#following-table {
+  text-align: center;
+  width: 100%;
+
+  tr, th {
+    text-align: center;
+      background-color: white;
+  }
+
+  td {
+    text-align: center;
+  }
+}
+
+h1 {
+  font-size: 25px;
+}
