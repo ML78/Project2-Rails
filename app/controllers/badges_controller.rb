@@ -1,6 +1,9 @@
 class BadgesController < ApplicationController
   before_action :set_badge, only: [:show, :edit, :update, :destroy]
 
+  before_action :require_user
+  before_action :require_admin, only: [:create, :update, :destroy]
+
   # GET /badges
   # GET /badges.json
   def index

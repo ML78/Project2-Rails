@@ -75,8 +75,8 @@ body{
 }
 
 #profile-image {
-  max-height: 200px;
-  max-width: 200px;
+  height: 100px;
+  width: 120px;
 }
 
 .thumb {
@@ -278,23 +278,25 @@ td {
 
 
 .chat-container {
-  bottom: 0;
-  left: 0;
-  right: 0;
-  top: 150px;
-  width: 80;
+  margin-bottom: 0;
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 50px;
+  max-width: 960px;
 }
+
 
 .message-container {
   .form-control {
     float: left;
+    height: 100px;
     width: 80%;
   }
   .btn {
     float: right;
     position: relative;
-    height: 54px !important;
     width: 18%;
+    color: blue;
   }
 }
 
