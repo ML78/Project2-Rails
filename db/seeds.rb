@@ -52,7 +52,7 @@ b2 = Badge.create(:image=>src="http://res.cloudinary.com/dbenxy2yz/image/upload/
 b3 = Badge.create(:image=>src="http://res.cloudinary.com/dbenxy2yz/image/upload/v1524647658/s1u1aih46b86vm4tnplv.png", :score=> 15)
 b4 = Badge.create(:image=>src="http://res.cloudinary.com/dbenxy2yz/image/upload/v1524647680/j8tngovpynoaa3cynaz2.png",:score=> 20)
 b4 = Badge.create(:image=>src="http://res.cloudinary.com/dbenxy2yz/image/upload/v1524647701/d1aqo44pqm1elcpgo4ek.png",:score=> 25)
-b4 = Badge.create(:image=>src="https://cloudinary.com/console/media_library/asset/image/upload/6b.png",:score=> 30)
+b4 = Badge.create(:image=>src="http://res.cloudinary.com/dbenxy2yz/image/upload/v1524647541/6b.png",:score=> 30)
 
 
 u2.tasks << t1
