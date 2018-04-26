@@ -35,6 +35,8 @@ class MessagesController < ApplicationController
       # redirect_to chat_path
       ActionCable.server.broadcast 'chatroom_channel', message: render_message(@message),
                                                         user: @message.user.name
+
+      redirect_to 'chatrooms/show'
     else
       render 'chatrooms/show'
     end
