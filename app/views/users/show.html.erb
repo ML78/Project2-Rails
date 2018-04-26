@@ -1,45 +1,43 @@
-<p id="notice"><%= notice %></p>
+<div class="userProfile">
+  <p id="notice"><%= notice %></p>
 
-    <div class ="badges">
-      <% if @user.badges.present?%>
-        <% @user.badges.each do |b| %>
-          <%= image_tag b.image, :alt => b.description, :class => 'thumb1' %>
+      <div class ="badges">
+        <% if @user.badges.present?%>
+          <% @user.badges.each do |b| %>
+            <%= image_tag b.image, :alt => b.description, :class => 'thumb1' %>
+          <% end %>
         <% end %>
-      <% end %>
-    </div>
+      </div>
 
-    <!-- `Badge.where('score <= ?', @user.score)` -->
+      <!-- `Badge.where('score <= ?', @user.score)` -->
 
-<p>
-  <% if @user.image.present? %>
-   <%= image_tag @user.image, :alt => @user.name, :id => 'profile-image'%>
- <% end %>
-</p>
+  <p>
+    <% if @user.image.present? %>
+     <%= image_tag @user.image, :alt => @user.name, :id => 'profile-image'%>
+   <% end %>
+  </p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @user.name %>
-</p>
+  <p>
+    <strong>Name:</strong>
+    <%= @user.name %>
+  </p>
 
-<p>
-  <strong>Location:</strong>
-  <%= @user.location %>
-</p>
+  <p>
+    <strong>Location:</strong>
+    <%= @user.location %>
+  </p>
 
-<% if @current_user.present? %>
-  <%= link_to 'Edit', edit_user_path(@user) %> |
-  <%= link_to 'Delete', @user, method: :delete, data: { confirm: 'Are you sure?' } %> |
-<% end %>
+  <% if @current_user.present? %>
+    <%= link_to 'Edit', edit_user_path(@user) %> |
+    <%= link_to 'Delete', @user, method: :delete, data: { confirm: 'Are you sure?' } %> |
+  <% end %>
 
-<!-- <%= link_to 'Back', users_path %> -->
+  <!-- <%= link_to 'Back', users_path %> -->
 
-<section class="stats">
-    <%= render 'shared/stats' %>
-       </section>
-     <section>
-        <%= render 'follow_form' if @current_user.present?  %>
-</section>
-
-
-  </div>
+  <section class="stats">
+      <%= render 'shared/stats' %>
+  </section>
+  <section>
+      <%= render 'follow_form' if @current_user.present?  %>
+  </section>
 </div>

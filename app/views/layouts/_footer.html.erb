@@ -1,5 +1,10 @@
 <!-- Sticky footer partial -->
-
-<footer>
-
-</footer>
+<div class="navBarFooter">
+  <footer>
+    <% if @current_user.present? && @current_user.admin %>
+        <%= link_to 'New Task', new_task_path, class:'navBarF' %>
+        <%= link_to 'Members', users_path, class:'navBarF' %>
+        <%= link_to 'Achievements', achievements_path, class:'navBarF' %>
+      <% end %>
+  </footer>
+</div>
