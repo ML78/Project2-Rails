@@ -6,7 +6,8 @@
         <%= link_to "#{@current_user.name}'s page", user_path(session[:user_id]), class:'navBarT' %>
         <%= link_to 'Sign out', login_path, :method => 'delete', class:'navBarT' %>
       <% end %>
-      <%=  link_to cl_image_tag("homepage1") %>
+      <!-- <%=  link_to cl_image_tag("homepage1") %> -->
+      <%=  link_to image_tag("homepage1.jpg") %>
     </div>
   </header>
 
@@ -38,7 +39,7 @@
       <%= link_to 'Transport', tasks_transport_path ,class:'navBar'%>
       <%= link_to 'Energy', tasks_energy_path ,class:'navBar'%> -->
       <%= link_to 'ScoreBoard', users_scoreboard_path ,class:'navBar'%>
-      <%= link_to 'Chat', chat_path, class:'navBar'%>
+      <%= link_to 'Forum', forum_path, class:'navBar'%>
       <%= link_to 'Donate', new_charge_path ,class:'navBar'%>
       <%= link_to 'Events', events_path ,class:'navBar'%>
       <!-- <%= link_to 'Events', new_badge_path ,class:'navBar'%> -->

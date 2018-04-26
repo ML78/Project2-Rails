@@ -54,6 +54,8 @@ b4 = Badge.create(:image=>src="http://res.cloudinary.com/dbenxy2yz/image/upload/
 b4 = Badge.create(:image=>src="http://res.cloudinary.com/dbenxy2yz/image/upload/v1524647701/d1aqo44pqm1elcpgo4ek.png",:score=> 25)
 b4 = Badge.create(:image=>src="https://cloudinary.com/console/media_library/asset/image/upload/6b",:score=> 30)
 
+
+
 u2.tasks << t1
 u2.tasks << t2
 u2.tasks << t3
