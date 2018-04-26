@@ -46,7 +46,5 @@
   <div class="actions">
     <%= form.submit (@user.new_record? ? "Sign up" : "Update profile"),:class=>"buttonsubmit" %>
   </div>
-  <div>
-    [ <%= link_to "Already a member? Sign in.", login_path %> ]
-  </div>
+
   <% end %>
