@@ -39,7 +39,7 @@ Rails.application.routes.draw do
   end
 
   mount ActionCable.server => '/cable'
-  get '/chat' => 'chatrooms#show'
+  get '/forum' => 'chatrooms#show'
   # This exposes the path for the cable items. It is the route which the client
   # (browser) will call in order to make the webscocket connection with the server
   # (which is where the actioncable server will be mounted).
