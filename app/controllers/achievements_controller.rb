@@ -1,6 +1,9 @@
 class AchievementsController < ApplicationController
   before_action :set_achievement, only: [:show, :edit, :update, :destroy]
 
+  before_action :require_user
+
+
   # GET /achievements
   # GET /achievements.json
   def index
