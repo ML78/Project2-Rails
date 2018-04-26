@@ -13,38 +13,38 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <!-- <div class="field"> -->
     <%= form.label :name %>
-    <%= form.text_area :name, id: :user_name %>
-  </div>
+    <%= form.text_field :name, id: :user_name %>
+  <!-- </div> -->
 
-  <div class="field">
+  <!-- <div class="field"> -->
     <%= form.label :email %>
-    <%= form.text_area :email, id: :user_email %>
-  </div>
+    <%= form.text_field :email, id: :user_email %>
+  <!-- </div> -->
 
-  <div class="field">
+  <!-- <div class="field"> -->
     <%= form.label :password %>
     <%= form.password_field :password %>
-  </div>
+  <!-- </div> -->
 
-  <div class="field">
+  <!-- <div class="field"> -->
     <%= form.label :password_confirmation %>
     <%= form.password_field :password_confirmation %>
-  </div>
+  <!-- </div> -->
 
-  <div class="field">
+  <!-- <div class="field"> -->
       <%= form.label :location, "Location" %>
-      <%= form.text_area :location, id: :user_location, placeholder: "Your suburb or city" %>
-  </div>
+      <%= form.text_field :location, id: :user_location, placeholder: "Your suburb or city" %>
+  <!-- </div> -->
 
-  <div class="field">
+  <!-- <div class="field"> -->
     <%= form.label :image, "Photo (optional)" %>
     <%= form.file_field :image, id: :user_image %>
-  </div>
+  <!-- </div> -->
 
   <div class="actions">
-    <%= form.submit (@user.new_record? ? "Sign up" : "Update profile") %>
+    <%= form.submit (@user.new_record? ? "Sign up" : "Update profile"),:class=>"buttonsubmit" %>
   </div>
   <div>
     [ <%= link_to "Already a member? Sign in.", login_path %> ]

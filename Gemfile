@@ -35,6 +35,7 @@ gem 'geocoder'
 gem 'stripe'
 gem 'nokogiri'
 gem 'three'
+gem 'sprockets-es6'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
