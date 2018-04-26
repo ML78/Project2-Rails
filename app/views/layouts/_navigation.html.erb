@@ -1,5 +1,7 @@
 
 
+<!-- <%= params.inspect %> -->
+
   <header>
     <div class="navBarTop">
       <% if @current_user.present? %>
@@ -30,18 +32,18 @@
       <%= link_to 'Help Us', new_charge_path ,class:'navBar'%>
       <%= link_to 'Events', events_path ,class:'navBar'%>
     <% elsif @current_user.present? && !@current_user.admin%>
-      <%= link_to 'Home', home_path ,class:'navBar'%>
-      <%= link_to 'Tasks', tasks_path ,class:'navBar'%>
+      <%= link_to 'Home', home_path ,class:"navBar #{ 'active' if params[:controller] == 'pages'}"%>
+      <%= link_to 'Tasks', tasks_path ,class:"navBar #{ 'active' if params[:controller] == 'tasks'}"%>
       <!-- <%= link_to 'Food & Drink', tasks_food_path ,class:'navBar'%>
       <%= link_to 'Shopping', tasks_shop_path ,class:'navBar'%>
       <%= link_to 'Water', tasks_water_path ,class:'navBar'%>
       <%= link_to 'Waste', tasks_waste_path ,class:'navBar'%>
       <%= link_to 'Transport', tasks_transport_path ,class:'navBar'%>
       <%= link_to 'Energy', tasks_energy_path ,class:'navBar'%> -->
-      <%= link_to 'ScoreBoard', users_scoreboard_path ,class:'navBar'%>
-      <%= link_to 'Forum', forum_path, class:'navBar'%>
-      <%= link_to 'Donate', new_charge_path ,class:'navBar'%>
-      <%= link_to 'Events', events_path ,class:'navBar'%>
+      <%= link_to 'ScoreBoard', users_scoreboard_path ,class:"navBar #{ 'active' if params[:controller] == 'users'}"%>
+      <%= link_to 'Forum', forum_path, class:"navBar #{ 'active' if params[:controller] == 'chatrooms'}"%>
+      <%= link_to 'Donate', new_charge_path ,class:"navBar #{ 'active' if params[:controller] == 'charges'}"%>
+      <%= link_to 'Events', events_path ,class:"navBar #{ 'active' if params[:controller] == 'events'}"%>
       <!-- <%= link_to 'Events', new_badge_path ,class:'navBar'%> -->
   <% end %>
 

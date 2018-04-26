@@ -2,16 +2,16 @@
 
 <h1>Forum</h1>
 
-<div class="row chat-container">
-  <div class="col-md-8 center-block">
+<div class="chat-container">
+  <div class="col-md-8">
     <div class="messages" id="messages">
       <%= render @messages %>
     </div>
     <hr />
     <div class="message-container">
       <%= form_for(@message, remote: true, :html => {class: "field", role: "form"}) do |f| %>
-        <%= f.text_area :content, class: "form-control", data: { behavior: "room_speaker" }, placeholder: "Chat now!" %>
-        <%= f.submit "Send", class: 'btn', data: { send: "message" } %>
+        <%= f.text_area :content, class: "form-control", placeholder: "Chat now!" %>
+        <%= f.submit "Send", class: 'btn' %>
       <% end %>
     </div>
   </div>
@@ -20,4 +20,3 @@
 <!-- render @messages takes messages instance variable initiated in the show action (from chatrooms controller)
       and uses the partial in messages/_message.html.erb for each message -->
 <!-- adding remote: true submits the form via AJAX -->
-<!-- data allows for enter key keypress (refer assets/javascripts/messages.js) -->

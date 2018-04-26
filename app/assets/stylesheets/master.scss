@@ -48,14 +48,14 @@ body{
   }
 
   .desc {
-  display: flex;
-  flex-direction: column;
-   justify-content: left;
-  div{
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
+    justify-content: left;
+  div {
+      display: flex;
+      justify-content: space-around;
     }
-    p{
+    p {
       font-family: 'Dosis', sans-serif;
       font-size: 18px;
       display: flex;
@@ -70,8 +70,8 @@ body{
 }
 
 #profile-image {
-  max-height: 200px;
-  max-width: 200px;
+  height: 100px;
+  width: 120px;
 }
 
 .thumb {
@@ -245,13 +245,13 @@ width: 100%;
   th {
     background-color: white;
     text-align: center;
-  }
+    }
 td {
   padding: 20px;
   img{
     height: 3em;
     width:3em;
-  }
+    }
   }
 }
 
@@ -265,7 +265,7 @@ td {
 .badges {
   display: inline-block;
   vertical-align: top;
-  img{
+  img {
     height: 3em;
     width:3em;
   }
@@ -273,23 +273,25 @@ td {
 
 
 .chat-container {
-  bottom: 0;
-  left: 0;
-  right: 0;
-  top: 150px;
-  width: 80;
+  margin-bottom: 0;
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 50px;
+  max-width: 960px;
 }
+
 
 .message-container {
   .form-control {
     float: left;
+    height: 100px;
     width: 80%;
   }
   .btn {
     float: right;
     position: relative;
-    height: 54px !important;
     width: 18%;
+    color: blue;
   }
 }
 
@@ -317,14 +319,14 @@ td {
     vertical-align: top;
   }
 }
-.pay{
+.pay {
   display: block;
 }
 
 //css for navigation
 
 header {
-  img{
+  img {
     height: 8em;
     // float:left;
     position: absolute;
@@ -336,11 +338,14 @@ header {
 .navBarTop {
   vertical-align: right;
   text-align: right;
+  a:hover {
+    background: black;
+  }
 
 }
 
 .signIn,.signUp {
-  margin-top: 12em;
+  margin-top: 2em;
   font-size: 15px;
   form {
     label{
@@ -384,6 +389,10 @@ header {
   }
 
   .showFilter:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  .showFilter.active {
     background-color: #ddd;
     color: black;
   }
@@ -445,4 +454,13 @@ h3 {
 
 h1 {
   font-size: 25px;
+}
+
+canvas {
+  display: none;
+  width: 600px;
+  height: 600px;
+  margin: 0 auto;
+  position: absolute;
+  z-index: 1;
 }

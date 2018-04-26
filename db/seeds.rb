@@ -1,11 +1,11 @@
 User.destroy_all
-u1 = User.create(:image => 'https://i.imgur.com/vedQYVM.jpg', :name => 'Admin', :email => 'admin@gmail.com', :location => 'Sydney', :password => 'admin', :admin => true)
-u2 = User.create(:image => 'https://i.imgur.com/3ukJaY7.jpg', :name => 'Julie', :email => 'julie@gmail.com', :location => 'Brisbane', :password => 'julie', :admin => false)
-u3 = User.create(:image => 'https://i.imgur.com/d4ZN1sS.jpg?1', :name => 'Monique', :email => 'monique@gmail.com', :location => 'Melbourne', :password => 'monique', :admin => false)
-u4 = User.create(:image => 'https://i.imgur.com/Dms8wUV.jpg', :name => 'Sarabjit', :email => 'sarabjit@gmail.com', :location => 'Sydney', :password => 'sarabjit', :admin => false)
-u5 = User.create(:image => 'https://i.imgur.com/jYVkwxD.jpg', :name => 'John', :email => 'john@gmail.com', :location => 'Sydney', :password => 'john', :admin => false)
-u6 = User.create(:image => 'https://i.imgur.com/27CRqKG.jpg', :name => 'Theo', :email => 'theo@gmail.com', :location => 'Auckland', :password => 'theo', :admin => false)
-u7 = User.create(:image => 'https://i.imgur.com/b5d6bbL.jpg', :name => 'Joel', :email => 'joel@gmail.com', :location => 'Hobart', :password => 'joel', :admin => false)
+u1 = User.create(:image => 'https://i.imgur.com/vedQYVM.jpg', :name => 'Admin', :email => 'admin@gmail.com', :location => 'Melbourne', :latitude => -37.814, :longitude => 144.96332, :password => 'admin', :admin => true)
+u2 = User.create(:image => 'https://i.imgur.com/3ukJaY7.jpg', :name => 'Julie', :email => 'julie@gmail.com', :location => 'Elizabeth Bay', :latitude => -33.87143, :longitude => 151.22841, :password => 'julie', :admin => false)
+u3 = User.create(:image => 'https://i.imgur.com/d4ZN1sS.jpg?1', :name => 'Monique', :email => 'monique@gmail.com', :location => 'Woollahra', :latitude => -33.888409, :longitude => 151.237218, :password => 'monique', :admin => false)
+u4 = User.create(:image => 'https://i.imgur.com/Dms8wUV.jpg', :name => 'Sarabjit', :email => 'sarabjit@gmail.com', :location => 'Dee Why', :latitude => -33.753562, :longitude => 151.28614, :password => 'sarabjit', :admin => false)
+u5 = User.create(:image => 'https://i.imgur.com/jYVkwxD.jpg', :name => 'John', :email => 'john@gmail.com', :location => 'Brisbane', :latitude => -27.470125, :longitude => 153.021072, :password => 'john', :admin => false)
+u6 = User.create(:image => 'https://i.imgur.com/27CRqKG.jpg', :name => 'Theo', :email => 'theo@gmail.com', :location => 'Adelaide', :latitude => -34.92866, :longitude => 138.59863, :password => 'theo', :admin => false)
+u7 = User.create(:image => 'https://i.imgur.com/b5d6bbL.jpg', :name => 'Joel', :email => 'joel@gmail.com', :location => 'Hobart', :latitude => -42.87936, :longitude => 147.32941, :password => 'joel', :admin => false)
 
 Task.destroy_all
 t1 = Task.create(:name => 'Reusable Bottle', :description => 'Refill your reusable bottle', :category => 'Food & Drink', :score => 2, :image =>'http://res.cloudinary.com/dbenxy2yz/image/upload/v1524304487/c1by25q6k3y6hb8uwkpw.jpg')
@@ -52,8 +52,7 @@ b2 = Badge.create(:image=>src="http://res.cloudinary.com/dbenxy2yz/image/upload/
 b3 = Badge.create(:image=>src="http://res.cloudinary.com/dbenxy2yz/image/upload/v1524647658/s1u1aih46b86vm4tnplv.png", :score=> 15)
 b4 = Badge.create(:image=>src="http://res.cloudinary.com/dbenxy2yz/image/upload/v1524647680/j8tngovpynoaa3cynaz2.png",:score=> 20)
 b4 = Badge.create(:image=>src="http://res.cloudinary.com/dbenxy2yz/image/upload/v1524647701/d1aqo44pqm1elcpgo4ek.png",:score=> 25)
-b4 = Badge.create(:image=>src="https://cloudinary.com/console/media_library/asset/image/upload/6b",:score=> 30)
-
+b4 = Badge.create(:image=>src="http://res.cloudinary.com/dbenxy2yz/image/upload/v1524647541/6b.png",:score=> 30)
 
 
 u2.tasks << t1
