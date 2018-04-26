@@ -355,18 +355,11 @@ td {
 
 }
 
-
-//css for navigation
-
 header {
   img {
     height: 8em;
     float:left;
-    // position: absolute;
-    // left: 190px;
-    // top:20px;
   }
-
 }
 .navBarTop {
   vertical-align: right;
@@ -491,13 +484,13 @@ footer {
   color: white;
   font-size: 15px;
   margin-top: 90px;
-  background-color: #8DC448;
+  background-color: #ccc;
   .navBarFooter {
     color: white;
   }
   .navBarF {
     color: white;
-    font-size: 30px;
+    font-size: 25px;
     display: inline-block;
     text-decoration: none;
     padding: 20px;
