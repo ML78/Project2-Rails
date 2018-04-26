@@ -1,11 +1,11 @@
 
   <div class="showFilterNav">
-    <%= link_to 'Food & Drink', tasks_food_path ,class:'showFilter'%>
-    <%= link_to 'Shopping', tasks_shop_path ,class:'showFilter'%>
-    <%= link_to 'Water', tasks_water_path ,class:'showFilter'%>
-    <%= link_to 'Waste', tasks_waste_path ,class:'showFilter'%>
-    <%= link_to 'Transport', tasks_transport_path ,class:'showFilter'%>
-    <%= link_to 'Energy', tasks_energy_path ,class:'showFilter'%>
+    <%= link_to 'Food & Drink', tasks_food_path ,class:"showFilter #{ 'active' if params[:controller] == 'tasks' && params[:action] == 'food'}"%>
+    <%= link_to 'Shopping', tasks_shop_path ,class:"showFilter #{ 'active' if params[:controller] == 'tasks' && params[:action] == 'shop'}"%>
+    <%= link_to 'Water', tasks_water_path ,class:"showFilter #{ 'active' if params[:controller] == 'tasks' && params[:action] == 'water'}"%>
+    <%= link_to 'Waste', tasks_waste_path ,class:"showFilter #{ 'active' if params[:controller] == 'tasks' && params[:action] == 'waste'}"%>
+    <%= link_to 'Transport', tasks_transport_path ,class:"showFilter #{ 'active' if params[:controller] == 'tasks' && params[:action] == 'transport'}"%>
+    <%= link_to 'Energy', tasks_energy_path ,class:"showFilter #{ 'active' if params[:controller] == 'tasks' && params[:action] == 'energy'}"%>
   </div>
 
 
