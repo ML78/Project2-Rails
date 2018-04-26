@@ -47,12 +47,12 @@ t29 = Task.create(:name => 'Switch For LED', :description => 'Upgrade your light
 t30 = Task.create(:name => 'Sunshine', :description => 'Let the sun shine in and warm up your home', :category => 'Energy', :score => 1, :image => 'http://res.cloudinary.com/dyi0udlrl/image/upload/v1524478369/4554049_700x448.jpg')
 
 Badge.destroy_all
-b1 = Badge.create(:image=>src="http://res.cloudinary.com/dbenxy2yz/image/upload/v1524647488/5.png", :score=> 5)
-b2 = Badge.create(:image=>src="http://res.cloudinary.com/dbenxy2yz/image/upload/v1524647644/qpa5ape421o6cobm8ttr.png",:score=> 10)
-b3 = Badge.create(:image=>src="http://res.cloudinary.com/dbenxy2yz/image/upload/v1524647658/s1u1aih46b86vm4tnplv.png", :score=> 15)
-b4 = Badge.create(:image=>src="http://res.cloudinary.com/dbenxy2yz/image/upload/v1524647680/j8tngovpynoaa3cynaz2.png",:score=> 20)
-b4 = Badge.create(:image=>src="http://res.cloudinary.com/dbenxy2yz/image/upload/v1524647701/d1aqo44pqm1elcpgo4ek.png",:score=> 25)
-b4 = Badge.create(:image=>src="http://res.cloudinary.com/dbenxy2yz/image/upload/v1524647541/6b.png",:score=> 30)
+b1 = Badge.create(:image=>src="http://res.cloudinary.com/dbenxy2yz/image/upload/v1524647488/5.png", :score=> 5, :description=>'Level 1')
+b2 = Badge.create(:image=>src="http://res.cloudinary.com/dbenxy2yz/image/upload/v1524647644/qpa5ape421o6cobm8ttr.png", :score=> 10, :description=>'Level 2')
+b3 = Badge.create(:image=>src="http://res.cloudinary.com/dbenxy2yz/image/upload/v1524647658/s1u1aih46b86vm4tnplv.png", :score=> 15, :description=>'Level 3')
+b4 = Badge.create(:image=>src="http://res.cloudinary.com/dbenxy2yz/image/upload/v1524647680/j8tngovpynoaa3cynaz2.png", :score=> 20, :description=>'Level 4')
+b4 = Badge.create(:image=>src="http://res.cloudinary.com/dbenxy2yz/image/upload/v1524647701/d1aqo44pqm1elcpgo4ek.png", :score=> 25, :description=>'Level 5')
+b4 = Badge.create(:image=>src="http://res.cloudinary.com/dbenxy2yz/image/upload/v1524647541/6b.png", :score=> 30, :description=>'Level 6')
 
 
 u2.tasks << t1
