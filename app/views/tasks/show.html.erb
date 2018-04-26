@@ -1,5 +1,4 @@
 
-
 <div class="showTask">
   <canvas id="celebration"></canvas>
   <% if @task.image.present? %>
@@ -14,9 +13,6 @@
 
     </div>
   </div>
-
-
-
 </div>
 
 
@@ -29,3 +25,7 @@
 <%= link_to 'Edit', edit_task_path(@task) %>
 <% end %>
 <%= link_to 'Back', tasks_path %>
+
+<% if @current_user.admin %>
+<%= link_to 'Delete', @task, :method => 'delete', :data => { :confirm => 'Are you sure you want to delete this task?' } %>
+<% end %>
