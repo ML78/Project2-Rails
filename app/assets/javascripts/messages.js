@@ -1,5 +1,4 @@
-// in the chat tutorial this code was directly in the application.js file and turbolinks was set as required that application.js file
-// in this project turbolinks has been disabled in (removed from) javascripts/application.js
+// real-time messaging with chatroom
 
 function scrollToBottom(){
   if($('#messages').length > 0) {
