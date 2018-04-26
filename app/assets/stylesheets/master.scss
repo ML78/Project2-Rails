@@ -1,6 +1,11 @@
 
 
 @import url('https://fonts.googleapis.com/css?family=Dosis');
+
+.allTasks a {
+  text-decoration: none;
+}
+
 body{
   font-family: 'Dosis', sans-serif;
 }
@@ -326,10 +331,10 @@ td {
 header {
   img{
     height: 8em;
-    // float:left;
-    position: absolute;
-    left: 190px;
-    top:20px;
+    float:left;
+    // position: absolute;
+    // left: 190px;
+    // top:20px;
   }
 
 }
@@ -342,6 +347,7 @@ header {
 .signIn,.signUp {
   margin-top: 12em;
   font-size: 15px;
+  clear:left;
   form {
     label{
       font-weight: bold;
@@ -365,8 +371,6 @@ header {
 
   }
 
-  // display: block;
-  // border: 1px solid black;
 
 
 }
@@ -393,13 +397,3 @@ header {
 }
 
 // css for EVENTS
-.views-row{
-
-}
-
-.views-row-first{
-
-}
-.date-display-range{
-
-}

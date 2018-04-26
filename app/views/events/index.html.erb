@@ -2,7 +2,12 @@
 
 <div id="events">
   <% @ecoexpo.each do |eco| %>
-    <div><%== eco%></div>
+    <% details = eco.text.strip.split("\n") %>
+    <div>
+      <h2><%= details[0] %></h2>
+      <h3><%= details[1] %></h3>
+      <p><%= details[2] %></p>
+    </div>
   <% end %>
 
 </div>
