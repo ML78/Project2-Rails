@@ -4,7 +4,6 @@
     <% if @current_user.present? && @current_user.admin %>
         <%= link_to 'New Task', new_task_path, class:'navBarF' %>
         <%= link_to 'Members', users_path, class:'navBarF' %>
-        <%= link_to 'Achievements', achievements_path, class:'navBarF' %>
         <%= link_to 'New Badges', new_badge_path, class:'navBarF' %>
         <%= link_to 'Badges', badges_path, class:'navBarF' %>
       <% end %>
