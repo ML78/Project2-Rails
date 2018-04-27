@@ -18,7 +18,7 @@ The app utilises the model–view–controller (MVC) framework of Rails.
   * Achievement - Tracks users and tasks.
   * Badge - Users earn badges upon reaching certain levels of accumulated points.  
   * Relationship - Users can follow each other.
-  * Message - Admin can send information about upcoming events on the forum and users can communicate with each other in real time.
+  * Message - Admin can broadcast information about upcoming events on the forum and users can communicate with each other in real time.
 
 
 * Handles data validation:
@@ -46,11 +46,10 @@ The app utilises the model–view–controller (MVC) framework of Rails.
   * stripe v3.13.0 for donation payments
   * nokogiri v1.8.2 to scrape data on events
   * three v1.2.0 for three.js animation
-  * sprockets-es6 v0.9.2 to handle es6 code
 
 ## Dedication
 
-Dedicated to Joel Turnbull  :smiley_cat:
+Dedicated to Joel Turnbull for his unwavering support and patience  :smiley_cat:
 
 ## Terms & Conditions
 This project is licensed under the MIT License.
