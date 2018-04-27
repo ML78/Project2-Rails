@@ -110,7 +110,7 @@ class UsersController < ApplicationController
 
     def require_same_user
       user = User.find(params[:id])
-      if current_user != user
+      if current_user != user && current_user.admin != false
         redirect_to users_path
       end
     end
