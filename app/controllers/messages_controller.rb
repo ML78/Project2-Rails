@@ -32,7 +32,6 @@ class MessagesController < ApplicationController
     @message.user = @current_user
 
     if @message.save
-      # redirect_to forum_path
       ActionCable.server.broadcast 'chatroom_channel', message: render_message(@message),
                                                         user: @message.user.name
     else

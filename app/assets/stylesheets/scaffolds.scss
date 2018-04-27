@@ -86,7 +86,7 @@ label {
 .stats {
   overflow: auto;
   margin-top: 0;
-  padding: 0;
+  padding: 0.5em 0 0.5em 0;
   a {
     float: left;
     padding: 0 10px;
@@ -103,21 +103,5 @@ label {
   }
   strong {
     display: block;
-  }
-}
-
-.user-sidebar {
-  overflow: auto;
-  margin-top: 10px;
-}
-
-.user_avatars {
-  overflow: auto;
-  margin-top: 10px;
-  .gravatar {
-    margin: 1px 1px;
-  }
-  a {
-    padding: 0;
   }
 }
