@@ -30,13 +30,14 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
 
-  if @user.image?
-    @cloudinary = Cloudinary::Uploader.upload(params[:user][:image])
-    @user.update :image => @cloudinary['url']
-  end
+
 
     respond_to do |format|
       if @user.save
+        if @user.image?
+          @cloudinary = Cloudinary::Uploader.upload(params[:user][:image])
+          @user.update :image => @cloudinary['url']
+        end
         session[:user_id] = @user.id
         cookies.signed[:user_id] = @user.id
         format.html { redirect_to @user, notice: 'User was successfully created.' }
@@ -56,6 +57,10 @@ class UsersController < ApplicationController
   def update
     respond_to do |format|
       if @user.update(user_params)
+        if @user.image?
+          @cloudinary = Cloudinary::Uploader.upload(params[:user][:image])
+          @user.update :image => @cloudinary['url']
+        end
         format.html { redirect_to @user, notice: 'User was successfully updated.' }
         format.json { render :show, status: :ok, location: @user }
       else
