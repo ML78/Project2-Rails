@@ -74,7 +74,7 @@ body{
 }
 
 #profile-image {
-  height: 100px;
+  height:100px;
   width: 120px;
 }
 
@@ -317,6 +317,10 @@ td {
   padding-left: 5px;
   padding-top: 10px;
   // border: 1px solid grey;
+  // #profile-image{
+  //   height: 30px;
+  //   width: 30px;
+  // }
 }
 
 .messages {
@@ -324,6 +328,8 @@ td {
   height: 16em;
   position: relative;
   overflow: auto;
+  text-align: left;
+
 }
 
 // .charges{
