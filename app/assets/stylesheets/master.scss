@@ -3,6 +3,10 @@
 }
 
 @import url('https://fonts.googleapis.com/css?family=Dosis');
+
+.allTasks a {
+  text-decoration: none;
+}
 body{
   font-family: 'Dosis', sans-serif;
 }
@@ -372,6 +376,7 @@ header {
 
   margin-top: 2em;
   font-size: 15px;
+  clear:left;
   form {
     label{
       font-weight: bold;
